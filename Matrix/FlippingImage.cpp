@@ -24,10 +24,10 @@ public:
                     --end;
                 }
         }
-
+        //inverton elementet 
         for (int i = 0; i < n; ++i) {
             for (int j = 0; j < image[i].size(); ++j) {
-                image[i][j] = 1 - image[i][j];
+                image[i][j] = 1 - image[i][j]; //nese numri eshte 0 e ben 1 dhe e kunderta nese numri 0
             }
         }
 
