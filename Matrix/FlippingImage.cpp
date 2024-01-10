@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 //Description: Given an n x n binary matrix image, flip the image horizontally,
 //then invert it, and return the resulting image.
