@@ -49,6 +49,25 @@ public:
 
         return ans;
     }
+    int calPoints(vector<string>& ops) {
+        vector<int> stk;
+        for (int i = 0; i < ops.size(); ++i) {
+            string op = ops[i]; 
+            int n = stk.size(); 
+            if (op == "+") { 
+                int a = stk[n - 1]; 
+                int b = stk[n - 2]; 
+                stk.push_back(a + b); 
+            } else if (op == "D") { 
+                stk.push_back(stk[n - 1] * 2); 
+            } else if (op == "C") { 
+                stk.pop_back(); 
+            } else { 
+                stk.push_back(stoi(op)); 
+            }
+        }
+        return accumulate(stk.begin(), stk.end(), 0);
+    }
 };
 int main(){
     int nr;
@@ -56,8 +75,9 @@ int main(){
     cin>>nr;
     //----Stack 
     Stack1 sol;
-    string s1,s2;
+    string s1,s2,s3;
     vector<int> cmimet, cmimet_perfundimtare;
+    vector<string> ops;
     switch (nr)
     {
     case 1: //maximum nesting depth of parantheses
@@ -78,6 +98,10 @@ int main(){
         }
         cout << endl;
         break;
+    case 4:
+        ops = {"5", "2", "C", "D", "+"};
+        int piketTotale = sol.calPoints(ops);
+        cout << "Piket totale: " << piketTotale << endl;
     default:
         cout<<"Gabim, mund te zgjidhni nje numer nga 1-20!"<<endl;
         break;
