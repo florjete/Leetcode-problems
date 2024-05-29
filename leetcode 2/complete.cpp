@@ -9,7 +9,7 @@
 using namespace std;
 
 //------------STACK-QUEUE---------------
-////MAXIMUM NESTING DEPTH OF PARANTHESES
+//1. MAXIMUM NESTING DEPTH OF PARANTHESES
 //Kompleksiteti kohor - O(n)
 //Kompleksiteti hapsinor - O(1)
 int maxDepth(string s) {
@@ -26,7 +26,7 @@ int maxDepth(string s) {
     return rez;
 }
 
-//REMOVE OUTERMOST PARANTHESES
+//2. REMOVE OUTERMOST PARANTHESES
 //Kompleksiteti kohor - O(n)
 //Kompleksiteti hapsinor - O(n)
 string removeOuterParentheses(string s) {
@@ -47,7 +47,7 @@ string removeOuterParentheses(string s) {
     return ans;
 }
 
-//FINAL PRICES WITH A SPECIAL DISCOUNT
+//3. FINAL PRICES WITH A SPECIAL DISCOUNT
 //Kompleksiteti kohor - O(n)
 //Kompleksiteti hapsinor - O(n)
 vector<int> finalPrices(vector<int>& prices) {
@@ -64,7 +64,7 @@ vector<int> finalPrices(vector<int>& prices) {
     return ans;
 }
 
-//NUMBER OF STUDENTS UNABLE TO EAT LUNCH
+//4. NUMBER OF STUDENTS UNABLE TO EAT LUNCH
 //Kompleksiteti kohor - O(n)
 //Kompleksiteti hapsinor - O(1)
 int countStudents(vector<int>& students, vector<int>& sandwiches) {
@@ -81,7 +81,7 @@ int countStudents(vector<int>& students, vector<int>& sandwiches) {
     return 0;
 }
 
-//NUMBER OF RECENT CALLS
+//5. NUMBER OF RECENT CALLS
 //Kompleksiteti kohor - O(1)
 //Kompleksiteti hapsinor - O(n)
 class RecentCounter {
@@ -99,7 +99,7 @@ public:
 };
 
 //--------------BST-----------------
-//SEARCH IN A BINARY SEARCH TREE
+//6. SEARCH IN A BINARY SEARCH TREE
 //Kompleksiteti kohor - O(logn) // kur eshte e pa balancuar O(n)
 //Kompleksiteti hapsinor - O(logn) // kur eshte e pa balancuar O(n)
 struct TreeNode {
@@ -117,7 +117,7 @@ TreeNode* searchBST(TreeNode* root, int val) {
                                 : searchBST(root->left, val);
     } 
 
-//CONVERT SORTED ARRAY TO BINARY SEARCH TREE
+//7. CONVERT SORTED ARRAY TO BINARY SEARCH TREE
 //Kompleksiteti kohor - O(n)
 //Kompleksiteti hapsinor - O(n)
 TreeNode* sortedArrayToBST(vector<int>& nums) {
@@ -134,7 +134,7 @@ TreeNode* sortedArrayToBST(vector<int>& nums) {
         return constructBST(0, nums.size() - 1);
 }
 
-//TWO SUM IV - INPUT IS A BST
+//8. TWO SUM IV - INPUT IS A BST
 //Kompleksiteti kohor - O(n)
 //Kompleksiteti hapsinor - O(n)
 bool findTarget(TreeNode* root, int k) {
@@ -170,7 +170,7 @@ bool findTarget(TreeNode* root, int k) {
     return false;
 }
 
-//RANGE SUM OF BST
+//9. RANGE SUM OF BST
 //Kompleksiteti kohor - O(logn) // kur eshte e pa balancuar O(n)
 //Kompleksiteti hapsinor - O(logn) // kur eshte e pa balancuar O(n)
 int rangeSumBST(TreeNode* root, int low, int high) {
@@ -193,7 +193,7 @@ int rangeSumBST(TreeNode* root, int low, int high) {
         return root->val + rangeSumBST(root->left, low, high) + rangeSumBST(root->right, low, high);
 }
 
-//INCREASING ORDER SEARCH TREE
+//10. INCREASING ORDER SEARCH TREE
 //Kompleksiteti kohor - O(n)
 //Kompleksiteti hapsinor - O(logn) // kur eshte e pa balancuar O(n)
     void inorder(TreeNode* node, TreeNode*& curr) {
@@ -221,7 +221,7 @@ int rangeSumBST(TreeNode* root, int low, int high) {
 
 //--------------LINKED LISTS---------------
 
-//CONVERT BINARY NUMBER IN A LINKED LIST TO INTEGER
+//11. CONVERT BINARY NUMBER IN A LINKED LIST TO INTEGER
 //Kompleksiteti kohor - O(n)
 //Kompleksiteti hapsinor - O(1)
 struct ListNode {
@@ -237,7 +237,7 @@ int getDecimalValue(ListNode* head) {
     }
     return result;
 }
-// MIDDLE OF THE LINKED LIST
+//12. MIDDLE OF THE LINKED LIST
 //Kompleksiteti kohor - O(n)
 //Kompleksiteti hapsinor - O(1)
 ListNode* middleNode(ListNode* head) {
@@ -256,7 +256,7 @@ ListNode* middleNode(ListNode* head) {
     return slow;
 }
 
-//REVERSE LINKED LISTS
+//13. REVERSE LINKED LISTS
 //Kompleksiteti kohor - O(n)
 //Kompleksiteti hapsinor - O(1)
 ListNode* reverseList(ListNode* head) {
@@ -273,7 +273,7 @@ ListNode* reverseList(ListNode* head) {
     return prev; // New head of the reversed list
 }
 
-//MERGE TWO SORTED LISTS
+//14. MERGE TWO SORTED LISTS
 //Kompleksiteti kohor - O(m+n)
 //Kompleksiteti hapsinor - O(1)
 struct ListNode1 {
@@ -309,7 +309,7 @@ ListNode1* mergeTwoLists(ListNode1* list1, ListNode1* list2) {
     return placeholder.next; // Head of the merged list
 }
 
-//INTERSECTION OF TWO LINKED LISTS
+//15. INTERSECTION OF TWO LINKED LISTS
 //Kompleksiteti kohor - O(m+n) //gjithmone
 //Kompleksiteti hapsinor - O(1)
 ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
@@ -330,7 +330,7 @@ ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
 }
 
 //---------------HASH TABLES----------------
-//PERMUTATION DIFFERENCE BETWEEN TWO STRINGS
+//16. PERMUTATION DIFFERENCE BETWEEN TWO STRINGS
 //Kompleksiteti kohor - O(s+t)
 //Kompleksiteti hapsinor - O(s)
 int findPermutationDifference(string s, string t) {
@@ -351,7 +351,7 @@ int findPermutationDifference(string s, string t) {
     return difference;
 }
 
-//HOW MANY NUMBERS ARE SMALLER THAN THE CURRENT NUMBER
+//17. HOW MANY NUMBERS ARE SMALLER THAN THE CURRENT NUMBER
 //Kompleksiteti kohor - O(n)
 //Kompleksiteti hapsinor - O(1)
 vector<int> smallerNumbersThanCurrent(vector<int>& nums) {
@@ -384,7 +384,7 @@ vector<int> smallerNumbersThanCurrent(vector<int>& nums) {
     return result;
 }
 
-//DECODE THE MESSAGE
+//18. DECODE THE MESSAGE
 //Kompleksiteti kohor - O(n)
 //Kompleksiteti hapsinor - O(1)
 string decodeMessage(string key, string message) {
@@ -416,7 +416,7 @@ string decodeMessage(string key, string message) {
     return message;
 }
 
-//NUMBER OF ARITHMETIC TRIPLETS
+//19. NUMBER OF ARITHMETIC TRIPLETS
 //Kompleksiteti kohor - O(n)
 //Kompleksiteti hapsinor - O(n)
 int arithmeticTriplets(vector<int>& nums, int diff) {
@@ -444,7 +444,7 @@ int arithmeticTriplets(vector<int>& nums, int diff) {
     return count;
 }
 
-//COUNT NUMBER OF PAIRS WITH ABSOLUTE DIFFERENCE K
+//20. COUNT NUMBER OF PAIRS WITH ABSOLUTE DIFFERENCE K
 //Kompleksiteti kohor - O(n)
 //Kompleksiteti hapsinor - O(n)
 int countKDifference(vector<int>& nums, int k) {
@@ -506,8 +506,10 @@ int main(){
             break;
         }
         case 2:{ //remove outermost parantheses
-            string s2 = "(()())(())";
-            cout << "Rezultati: " << removeOuterParentheses(s2) << endl;
+            string s2;
+            cout<<"Sheno nje string me kllapa ashtu qe te heqim kllapat e jashtme: ";
+            cin>>s2;
+            cout << "\nRezultati: " << removeOuterParentheses(s2) << endl;
             break;
         }
         case 3: {//final prices with a special discount
@@ -588,16 +590,24 @@ int main(){
             break;
         }
         case 10: { // Increasing order search tree
+            // Create the root of the tree with value 5
             TreeNode* root = new TreeNode(5);
+            // Create and attach the left and right children of the root
             root->left = new TreeNode(3);
             root->right = new TreeNode(6);
+            // Create and attach the left and right children of the node with value 3
             root->left->left = new TreeNode(2);
             root->left->right = new TreeNode(4);
+            // Create and attach the left child of the node with value 2
             root->left->left->left = new TreeNode(1);
+            // Create and attach the right child of the node with value 6
             root->right->right = new TreeNode(8);
+            // Create and attach the left and right children of the node with value 8
             root->right->right->left = new TreeNode(7);
             root->right->right->right = new TreeNode(9);
+            // Call the function to rearrange the tree in increasing order
             TreeNode* result = increasingBST(root);
+            // Print the values of the resulting tree in a single line
             while (result) {
                 cout << result->val << " ";
                 result = result->right;
